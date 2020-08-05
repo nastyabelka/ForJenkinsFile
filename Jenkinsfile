@@ -108,7 +108,7 @@ pipeline {
                               
                               cat task-definition.json
                               echo 'update task definition...'
-                              aws ecs register-task-definition --cli-input-json file:///var/lib/jenkins/workspace/CI-pipeline/task-definition.json --region us-east-1
+                              aws ecs register-task-definition --cli-input-json file:///var/lib/jenkins/workspace/CI-JenkinsFile/task-definition.json --region us-east-1
                               aws ecs update-service --cluster Belka-CI --service Belka-CI-service-last --task-definition Belka-CI-last:1
                         '''
                     
