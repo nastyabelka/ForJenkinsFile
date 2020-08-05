@@ -80,7 +80,7 @@ pipeline {
         stage('Build image') {
             steps {
                 script {
-                    sh '''cd /var/lib/jenkins/workspace/CI-pipeline
+                    sh '''cd /var/lib/jenkins/workspace/CI-JenkinsFile
                           pwd
                           docker build -t gw:${BUILD_NUMBER} .
                           docker tag gw:${BUILD_NUMBER} 192608593085.dkr.ecr.us-east-1.amazonaws.com/gw:${BUILD_NUMBER}'''
